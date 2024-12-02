@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2.3.4
 
       - name: npm install, make test-coverage
         run: |
@@ -35,6 +38,3 @@ jobs:
           npm ci
           npm test
           make test-coverage
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2
