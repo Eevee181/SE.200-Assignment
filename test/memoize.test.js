@@ -1,2 +1,2 @@
-var chai = require("chai")
-var memoize = require("../src/memoize.js")
+//var chai = require("chai")
+//var memoize = from("../src/memoize.js")
