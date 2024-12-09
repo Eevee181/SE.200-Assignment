@@ -1,0 +1,3 @@
+/**/.* #ignore dotted files
+/**/.*/ #ignore dotted folders
+!/.gitignore #except 'gitignore'
