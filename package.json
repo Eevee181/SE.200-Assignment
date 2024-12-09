@@ -20,7 +20,7 @@
   },
   "nyc": {
   "reporter": ["lcov", "text"],
-  "exclude": ["test"],
+  "exclude": ["test","src/.internal", "coverage"],
   "all": true
 }
 }
