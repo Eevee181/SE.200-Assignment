@@ -22,7 +22,6 @@ import isLength from './isLength.js'
  *
  * isArrayLike(Function)
  * // => false 
- * modified file name
  */
 function isArrayLike(value) {
   return value != null && typeof value !== 'function' && isLength(value.length)
