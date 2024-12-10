@@ -31,3 +31,6 @@ jobs:
         uses: coverallsapp/github-action@v2
         with:  
           github-token: §{{ secrets.COVERALLS_REPO_TOKEN }}
+
+      - run: 
+          c8 report --reporter=text-lcov | coveralls
