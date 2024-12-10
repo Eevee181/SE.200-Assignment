@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for defaultTo.js</title>
+    <title>Code coverage report for isObjectLike.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> defaultTo.js</h1>
+        <h1><a href="index.html">All files</a> isObjectLike.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -86,7 +86,14 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,31 +115,33 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Checks `value` to determine whether a default value should be returned in
- * its place. The `defaultValue` is returned if `value` is `NaN`, `null`,
- * or `undefined`.
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
  *
- * @since 4.14.0
- * @category Util
+ * @since 4.0.0
+ * @category Lang
  * @param {*} value The value to check.
- * @param {*} defaultValue The default value.
- * @returns {*} Returns the resolved value.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
  * @example
  *
- * defaultTo(1, 10)
- * // =&gt; 1
+ * isObjectLike({})
+ * // =&gt; true
  *
- * defaultTo(undefined, 10)
- * // =&gt; 10
+ * isObjectLike([1, 2, 3])
+ * // =&gt; true
+ *
+ * isObjectLike(Function)
+ * // =&gt; false
+ *
+ * isObjectLike(null)
+ * // =&gt; false
  */
-function <span class="fstat-no" title="function not covered" >defaultTo(</span>value, defaultValue) {
-<span class="cstat-no" title="statement not covered" >  return value == null ? defaultValue : value</span>
-}
-&nbsp;
-export default defaultTo
-&nbsp;</pre></td></tr></table></pre>
+function <span class="fstat-no" title="function not covered" >isObjectLike(</span>value) {
+<span class="cstat-no" title="statement not covered" >    return typeof value === 'object' &amp;&amp; value !== null</span>
+  }
+  
+  export default isObjectLike</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
