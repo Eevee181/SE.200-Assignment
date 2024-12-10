@@ -22,5 +22,9 @@ describe("Value is returned as integer", () => {
 
     it("string, expecting integer", () =>{
         expect(toInteger('3.2')).to.equal(3) 
+    })
+    
+    it("Not an integer", () =>{
+        expect(toInteger("a")).throw(TypeError)
     });
 })
