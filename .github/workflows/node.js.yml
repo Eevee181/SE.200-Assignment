@@ -31,5 +31,5 @@ jobs:
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-          nyc report --reporter=text-lcov | coveralls
+          c8 report --reporter=text-lcov | coveralls
 
