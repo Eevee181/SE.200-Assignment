@@ -19,8 +19,9 @@ jobs:
       - name: Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: |
-          c8 report --reporter=text-lcov | coveralls
+        run: | 
+          cat coverage/lcov.info | npx coveralls
+        #c8 report --reporter=text-lcov | npx coveralls
       
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
@@ -32,3 +33,4 @@ jobs:
       - run: npm install
       - run: npm ci
       - run: npm test
+      - run: c8 --reporter=lcov npm test
