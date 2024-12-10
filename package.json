@@ -16,22 +16,10 @@
   "devDependencies": {
     "c8": "^10.1.3",
     "coveralls": "^3.1.1",
-    "mocha": "^11.0.1",
-    "nyc": "^17.1.0"
+    "mocha": "^11.0.1"
   },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "src"
-    ],
-    "exclude": [
-      "test",
-      "src/.internal",
-      "coverage"
-    ],
-    "all": true
+  "c8": {
+    "include": "src",
+    "exclude": "src/.internal"
   }
 }
