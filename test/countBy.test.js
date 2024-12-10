@@ -9,7 +9,7 @@ describe("countBy", ()=>{
             { 'user': 'barney', 'active': true },
             { 'user': 'betty', 'active': true },
             { 'user': 'fred', 'active': false }
-         ]
+        ]
 
         const result = countBy(users, value => value.active);
         expect(result).to.deep.equal({ 'true': 1, 'false': 0 });
