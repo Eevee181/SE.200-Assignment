@@ -3,7 +3,7 @@ import defaultTo from "../src/defaultTo.js"
 
 const expect = chai.expect
 
-describe("defaultTp", ()=>{
+describe("defaultTo", ()=>{
     it("Inserting defined value & default value, expecting return value as defined", ()=>{
         expect(defaultTo(1, 10)).to.equal(1); 
         expect(defaultTo(false, true)).to.equal(false); 
